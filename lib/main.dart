@@ -147,8 +147,10 @@ class _HomeScreenState extends State<HomeScreen> {
     controller.animateCamera(
       CameraUpdate.newCameraPosition(
         CameraPosition(
-          target: LatLng(latitude, longitude),
-          zoom: 16,
+            target: LatLng(latitude, longitude),
+            zoom: 16,
+            bearing: 90,
+            tilt: 90
         ),
       ),
     );
@@ -166,8 +168,6 @@ class _HomeScreenState extends State<HomeScreen> {
         initialCameraPosition: CameraPosition(
             target: LatLng(0, 0),
             zoom: 16,
-            bearing: 90,
-            tilt: 90
         ),
         onMapCreated: (GoogleMapController controller) {
           _controller.complete(controller);
@@ -188,5 +188,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-
-  
