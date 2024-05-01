@@ -13,7 +13,7 @@ Future<void> main() async {
 Future<void> requestLocationPermission() async {
   final PermissionStatus status = await Permission.location.request();
   if (status != PermissionStatus.granted) {
-    throw Exception('Location permission denied');
+    throw Exception('Location permission denied !');
   }
 }
 
@@ -160,7 +160,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Geolocator map app'),
+        title: const Text('Geolocator Map App'),
       ),
       body: GoogleMap(
         mapType: MapType.normal,
